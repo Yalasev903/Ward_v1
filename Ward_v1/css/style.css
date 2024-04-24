@@ -1,0 +1,64 @@
+.navbar {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+     background-color:  #FFF;
+   }
+   .color_t {
+     
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 133.333% */
+   }
+#navbarScroll {
+     background-color: #FFF;
+     z-index: 1010;
+}
+#navbar {
+     background-color: #FFF;
+}
+.nav-item{
+     font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+     padding: 8px 16px;
+}
+   .navbar-first, .navbar-second {
+     background-color: #FFF; /* Установка фона верхнего и нижнего меню */
+     transition: top 0.5s; /* Плавное перемещение навбаров */
+   }
+   .navbar-second {
+     top: 0;
+     z-index: 1030; /* Для обеспечения видимости над другими элементами */
+     transition: top 0.5s; /* Плавное перемещение второго навбара */
+   }
+   /* Дополнительные стили могут быть здесь */
+
+   .search-input {
+     display: none; /* Скрыть поле поиска по умолчанию */
+   }
+   @media (max-width: 992px) {
+     .navbar-second .navbar-collapse {
+       position: fixed;
+       top: 56px; /* Высота первого навбара */
+       left: 0;
+       right: 0;
+       z-index: 1020; /* Под первым навбаром */
+       background-color: #FFF;
+     }
+   }
+   @media (max-width: 992px) {
+     .navbar-first .navbar-toggler {
+       display: none; /* Скрыть бургер-меню первого навбара на мобильных устройствах */
+     }
+     
+     .navbar-second .navbar-toggler {
+       display: block; /* Убедиться, что бургер-меню второго навбара видно на мобильных устройствах */
+     }
+   }
+   
